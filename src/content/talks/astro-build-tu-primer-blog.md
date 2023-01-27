@@ -15,4 +15,4 @@ Url: [Link](https://github.com/andres-vizcaino/astro-capacitacion)
 ### Recursos
 - [Astro](https://astro.build/)
 
-Este sitio también está hecho con Astro, puedes ver el código en [Github](
+Este sitio también está hecho con Astro, puedes ver el código en [Github](https://github.com/andres-vizcaino/igloo-talks-astro)
