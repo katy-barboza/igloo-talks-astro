@@ -1,0 +1,50 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import { getCollection, CollectionEntry } from "astro:content";
+
+export async function getStaticPaths() {
+  const blogEntries = await getCollection("talks");
+  return blogEntries.map((talk) => ({
+    params: { slug: talk.slug },
+    props: talk,
+  }));
+}
+
+type Props = CollectionEntry<"talks">;
+
+const talk = Astro.props;
+const { Content } = await talk.render();
+---
+
+<Layout title={talk.data.title}>
+  <main class="px-8 mx-auto max-w-7xl mt-10">
+    <div class="flex items-center justify-between">
+      <h1 class="text-4xl mb-5 font-bold">{talk.data.title}</h1>
+      <time
+        class="px-4 py-2 text-base rounded-full text-indigo-500 border border-indigo-500 undefined"
+      >
+        {talk.data.date}</time
+      >
+    </div>
+    <div class="flex flex-wrap items-center mb-10 justify-starts">
+      {
+        talk.data.tags &&
+          talk.data.tags.map((tag: string) => (
+            <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-blue-100 rounded-2xl">
+              #{tag}
+            </div>
+          ))
+      }
+    </div>
+
+    <iframe
+      src={talk.data.video}
+      class="w-full aspect-video"
+      allow="autoplay; fullscreen; picture-in-picture"
+      allowfullscreen></iframe>
+
+    <div class="mt-10 prose">
+      <Content />
+    </div>
+  </main>
+</Layout>
