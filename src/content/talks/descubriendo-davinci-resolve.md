@@ -9,7 +9,7 @@ video: "https://player.vimeo.com/video/780513814?h=e77d9b4e7e"
 
 
 Natalia Vargas
-**Editora Audiovisual - Post**
+**Animadora audiovisual 2D**
 
 Yuliana Restrepo
 **Editora Audiovisual**
