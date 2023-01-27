@@ -23,7 +23,7 @@ const { Content } = await talk.render();
       <time
         class="px-4 py-2 text-base rounded-full text-indigo-500 border border-indigo-500 undefined"
       >
-        {talk.data.date}</time
+        {new Date(talk.data.date).toLocaleString().split(",")[0]}</time
       >
     </div>
     <div class="flex flex-wrap items-center mb-10 justify-starts">

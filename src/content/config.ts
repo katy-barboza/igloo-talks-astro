@@ -7,7 +7,7 @@ const talksCollention = defineCollection({
     image: z.string().optional(),
     description: z.string().optional(),
     tags: z.array(z.string()).optional(),
-    date: z.string().optional(),
+    date: z.string().transform((str) => new Date(str)),
     video: z.string(),
   }),
 });
