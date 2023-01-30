@@ -1,5 +1,5 @@
 ---
-title: "Hablemos de métodos para optimizarte."
+title: "Hablemos de métodos para optimizarte"
 image: "https://www.dreamhost.com/blog/wp-content/uploads/2022/07/optimize-images-for-web-featured-750x498.jpeg"
 description: "Mentalidad ágil para la vida diaria, marca la diferencia en tu desempeño profesional."
 tags: ["Mentalidad ágil", "Optimización"]
