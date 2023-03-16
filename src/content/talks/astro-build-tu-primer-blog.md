@@ -1,6 +1,6 @@
 ---
 title: "Tu primer blog con Astro"
-image: "https://astro.build/_astro/social.8f19ba72_1dBy5y.jpeg"
+image: "https://astro.build/og/astro.jpg"
 description: "Creamos un blog y portafolio con Astro desde 0, aprende está geneal herramienta para crear sitios web estáticos."
 tags: ["Astro", "Blog", "Portafolio"]
 date: "2023-01-26"
