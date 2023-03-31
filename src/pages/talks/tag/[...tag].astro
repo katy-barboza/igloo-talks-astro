@@ -1,0 +1,16 @@
+---
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const allTalks = await getCollection("talks");
+  const allTags = [...new Set(allTalks.map((el) => el.data.tags).flat())];
+  return allTags.map((tag) => ({
+    params: { slug: tag },
+    props: tag,
+  }));
+}
+
+const tag = Astro.props;
+---
+
+<h1>Bienvenido {tag}</h1>
