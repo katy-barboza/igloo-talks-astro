@@ -25,9 +25,12 @@ const { title, description, type, tags, image, url } = Astro.props;
       <div class="flex flex-wrap items-center mt-4 justify-starts">
         {
           tags.map((tag) => (
-            <div class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-blue-100 rounded-2xl">
+            <a
+              href={`/talks/tag/${tag}`}
+              class="text-xs mr-2 py-1.5 px-4 text-gray-600 bg-blue-100 rounded-2xl"
+            >
               #{tag}
-            </div>
+            </a>
           ))
         }
       </div>
