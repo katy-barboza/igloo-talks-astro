@@ -5,5 +5,18 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind()]
+  integrations: [tailwind()],
+  Headers() {
+    return [
+      {
+        'X-Content-Type-Options': 'nosniff'
+      },
+      {
+        'X-Frame-Options': 'DENY'
+      },
+      {
+        'Strict-Transport-Security': 'max-age=63072000; includeSubDomains; preload'
+      },
+    ]
+  }
 });
